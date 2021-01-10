@@ -33,7 +33,7 @@
     div a {
         color: #ff3e00;
     }
-    div img {
+    header img {
         height: 36vmin;
         margin-bottom: 3rem;
         animation: App-logo-spin infinite 1.6s ease-in-out alternate;
@@ -48,18 +48,31 @@
     }
 </style>
 
-<div class="text-center">
-    <header class="flex flex-col items-center justify-center">
-        <img src="/logo.svg" alt="logo" class="pointer-events-none" />
-        <p class="w-32">Edit <code>src/App.svelte</code> and save to reload.</p>
-        <p>Page has been open for <code>{count}</code> seconds.</p>
-        <p>
-            <a
-                href="https://svelte.dev"
-                target="_blank"
-                rel="noopener noreferrer">
-                Learn Svelte
-            </a>
+<div class="w-64 py-2 px-2 mx-auto bg-white rounded-xl shadow-md my-4">
+    <p class="text-center space-y-2">
+        Page has been open for
+        <code>{count}</code>
+        seconds.
+    </p>
+</div>
+
+<div
+    class="grid grid-rows-2 grid-flow-col gap-2 w-80 mx-auto bg-white rounded-xl shadow-md">
+    <div class="min-w-full sm:mx-0 sm:flex-shrink-0">
+        <img src="https://picsum.photos/id/163/360/200" alt="Eating Location" />
+        <p
+            class="text-lg text-black font-semibold"
+            style="position: absolute; bottom: -20px">
+            Erin Lindford
         </p>
-    </header>
+    </div>
+
+    <div class="text-left space-y-2 py-4 px-4 sm:text-left">
+        <div class="space-y-0.5">
+            <p class="text-lg text-black font-semibold">Erin Lindford</p>
+            <p class="text-gray-500 font-medium">Product Engineer</p>
+        </div>
+        <button
+            class="px-4 py-1 text-sm text-purple-600 font-semibold rounded-full border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">Message</button>
+    </div>
 </div>
