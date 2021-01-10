@@ -10,6 +10,9 @@ npx create-snowpack-app dir-name --template snowpack-svelte-ts-tw
 
 Uses `svelte-preprocess`
 
+## Prerequisites
+
+- You need `node.js 12.13 or higher` to run `TailwindCSS 2` - [Upgrade Guide for v2](https://tailwindcss.com/docs/upgrading-to-v2#upgrade-to-node-js-12-13-or-higher)
 ## Available Scripts
 
 ### npm start
