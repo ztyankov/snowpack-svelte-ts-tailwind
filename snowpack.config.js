@@ -1,6 +1,5 @@
 /** @type { import("snowpack").SnowpackUserConfig } */
 module.exports = {
-    extends: "@snowpack/app-scripts-svelte",
     mount: {
         public: "/",
         src: "/_dist_",
@@ -14,20 +13,22 @@ module.exports = {
         "@snowpack/plugin-dotenv",
         "@snowpack/plugin-typescript",
     ],
-    install: [
-        /* ... */
-    ],
-    installOptions: {
+    packageOptions: {
         installTypes: true,
-        /* ... */
+        installOptions: {
+            rollup: {
+                plugins: [
+                    require("rollup-plugin-svelte")({
+                        include: ["./node_modules"],
+                    })
+                ]
+            }
+        },
     },
     devOptions: {
         /* ... */
     },
     buildOptions: {
-        /* ... */
-    },
-    proxy: {
         /* ... */
     },
     alias: {
